@@ -1,4 +1,9 @@
-// shark-section-up space-section-down junk-section-down
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
 
 class UI {
     constructor() {
@@ -70,3 +75,4 @@ class UI {
 
 let interface = new UI;
 interface.operateSections();
+
